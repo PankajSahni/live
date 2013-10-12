@@ -37,7 +37,7 @@
             socketIO.delegate = nil;
         }
     socketIO = [[SocketIO alloc] initWithDelegate:self];
-    [socketIO connectToHost:@"localhost" onPort:4000];
+    [socketIO connectToHost:@"localhost" onPort:8080];
         ;
     });
     mouseMoved = 0;
@@ -139,7 +139,7 @@
     NSLog(@"userAnsRequest jsonString %@", jsonString);
     
     [socketIO sendMessage:jsonString
-          withAcknowledge:TRUE];
+          withAcknowledge:FALSE];
     
     //    [_userAnsArray removeObject:userAnsRequest];
 }
